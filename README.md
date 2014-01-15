@@ -1,4 +1,4 @@
-android-equiwidth-horizontal-layout
+##android-equiwidth-horizontal-layout
 ===================================
 
 A horizontal linear layout in which the children take up equal width - without necessarily filling up the entire width. This screenshot sums up the reason for using this library:
@@ -7,7 +7,6 @@ A horizontal linear layout in which the children take up equal width - without n
 
 
 ###The Problem
-========
 
 In Android you often want to show a few buttons (probably up to three) in a horizontal `LinearLayout`. However, the text on the button would be varying in width. There are two ways to handle this:
 
@@ -18,7 +17,6 @@ Note that it is possible to use a combination of `weightSum` on the parent layou
  
 
 ###The Solution
-========
 
 The solution is to have a layout that does the following:
 
@@ -28,7 +26,6 @@ That's exactly what this library does - in the form of an extension to `LinearLa
 
 
 ###Usage
-========
 
 Just use `com.github.curioustechizen.equiwhl.EquiwidthHorizontalLinearLayout` instead of a regular horizontal `LinearLayout`. See the sample app for more details.
 
@@ -36,7 +33,6 @@ You can either add the Android library project `android-equiwidth-horizontal-lay
 
 
 ###Limitations
-========
 
   - The library is not perform any validation - so for example if you use it with a `orientation="vertical"` I have no idea what to expect.
   - The `onMeasure` phase uses 2 passes. This could quickly run into a performance bottleneck if you have a complex layout nested inside of the `EquiwidthHorizontalLinearLayout`. I would recommend to use it only for simple use cases like buttons and the like.
