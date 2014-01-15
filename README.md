@@ -34,7 +34,12 @@ You can either add the Android library project `android-equiwidth-horizontal-lay
 
 ###Limitations
 
-  - The library is not perform any validation - so for example if you use it with a `orientation="vertical"` I have no idea what to expect.
+  - The library does not perform any validation - so for example if you use it with a `orientation="vertical"` I have no idea what to expect.
   - The `onMeasure` phase uses 2 passes. This could quickly run into a performance bottleneck if you have a complex layout nested inside of the `EquiwidthHorizontalLinearLayout`. I would recommend to use it only for simple use cases like buttons and the like.
+  
+
+###Contributing
+
+The library is not exactly battle-tested - so, contributions are as always welcome. 
 
 [1]: screenshots/sample.png "screenshot.png"
