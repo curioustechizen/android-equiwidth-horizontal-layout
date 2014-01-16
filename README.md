@@ -1,5 +1,38 @@
+##DEPRECATED
+
+About 24 hours after publishing this library, I found out that a regular `LinearLayout` with `measureWithLargestChild="true"` can indeed be used to achieve the desired result. Here is an example of how this can be done:
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:measureWithLargestChild="true"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="OK" />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="LargerText" />
+
+</LinearLayout>
+```
+
+The key here is the `layout_gravity="center_horizontal"` part.
+
+This library is thus deprecated. I don't expect to maintain it any further, unless I find really compelling reason to keep it alive.
+
+
 ##android-equiwidth-horizontal-layout
-===================================
 
 A horizontal linear layout in which the children take up equal width - without necessarily filling up the entire width. This screenshot sums up the reason for using this library:
 
